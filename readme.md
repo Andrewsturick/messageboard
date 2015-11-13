@@ -1,3 +1,1 @@
-# Express Example
-
-First, cd into the project directory, and do `npm run setup` to install the dependencies listed in the package.json and bower.json.  Then you can start the server in Node.
+my message board using node.js, dynamic jade on the front end, and mongodb for the databsase...
