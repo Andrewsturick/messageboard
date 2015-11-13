@@ -8,6 +8,10 @@ var morgan = require('morgan');
 
 var app = express();
 
+var mongoose = require('mongoose');
+mongoose.connect('mongodb://localhost/messageboard');
+
+
 app.set('view engine', 'jade');
 
 // GENERAL MIDDLEWARE
@@ -18,6 +22,7 @@ app.use(express.static('public'));
 
 // ROUTES
 app.use('/', require('./routes/index'));
+app.use('/messages', require('./routes/messages'))
 
 // 404 HANDLER
 app.use(function(req, res){

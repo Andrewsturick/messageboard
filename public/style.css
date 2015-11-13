@@ -1,0 +1,42 @@
+
+.table{
+
+margin-top: 50px;
+
+}
+
+body{
+  text-align: center;
+}
+
+th, td,tr{
+  border: 1px solid red;
+  text-align: center;
+}
+
+i{
+  cursor: pointer;
+
+}
+
+i:hover{
+  color:red;
+}
+
+.editing-row-currently{
+  background-color:orange;
+}
+
+
+.editing .hidden{
+display:none;
+}
+
+.editLabel{
+  color:orange;
+  font-size: 2em;
+}
+
+.editing{
+  border: 1px solid orange;
+}

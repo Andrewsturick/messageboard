@@ -1,0 +1,47 @@
+doctype html
+html(lang='en')
+  head
+    title Message Board
+    link(href="bower_components/bootstrap/dist/css/bootstrap.min.css", rel='stylesheet')
+    link(href="bower_components/font-awesome/css/font-awesome.min.css", rel='stylesheet')
+    link(href="bower_components/bootswatch/cyborg/bootstrap.min.css", rel='stylesheet')
+    link(href="style.css", rel='stylesheet')
+  body
+    div.container
+    h1= title
+    form.
+    input(type='text', id='name' name='name', placeholder='Name:')
+    input(type='textarea', id='message' name='message', cols='40', rows='40', placeholder='Message:')
+    input(type="submit" id='submit')
+    form.editing.hidden
+            div.editLabel EDIT
+            input(type='text', id='editName' name='Name', placeholder='Edit Name:')
+            input(type='text', id='editMessage' name='Message', placeholder='Edit Message:')
+            input(type="submit" id='editSubmit')
+    
+        
+    table.table.table-bordered.table-striped
+      thead
+        tr
+          th Name
+          th Message
+          th Date
+          th Edit
+          th Delete
+          tbody
+          each element in messageList
+            tr
+             td.name= element.name
+             td.message= element.message
+             td.time= element.date 
+             td.edit
+                i.fa.fa-pencil-square-o.fa-lg
+             td.delete
+                i.fa.fa-trash-o.fa-lg
+        
+
+    
+    
+    
+    script(src='bower_components/jquery/dist/jquery.min.js')
+    script(src='main.js')
