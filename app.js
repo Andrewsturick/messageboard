@@ -1,5 +1,7 @@
 'use strict';
 
+
+require('dotenv').load();
 var PORT = process.env.PORT || 3000;
 
 var express = require('express');
@@ -9,7 +11,7 @@ var morgan = require('morgan');
 var app = express();
 
 var mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/messageboard');
+mongoose.connect('mongodb://'+process.env.DB_USER +':'+process.env.DB_PASS +'@ds053784.mongolab.com:53784/messageboard');
 
 
 app.set('view engine', 'jade');
