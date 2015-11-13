@@ -20,7 +20,10 @@ function editRowDisappear(e){
 
 
 function deleteRow(e){
-  console.log()
+
+  $('.editing').addClass('hidden');
+  $(e.target).closest('tr').children('td').toggleClass('editing-row-currently')
+
   var obj = {};
   var timestamp = $(e.target).closest('tr').children('.time').text();
   var thisRow = (e.target).closest('tr').rowIndex;
